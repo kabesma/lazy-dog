@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/kabesma/lazy-dog#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
+    "clui": "^0.3.6",
     "commander": "^8.2.0"
   }
 }
