@@ -1,0 +1,30 @@
+{
+  "name": "lazy-dog",
+  "version": "1.0.0",
+  "description": "This package for someone people lazy make a model, view and controller laravel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabesma/lazy-dog.git"
+  },
+  "keywords": [
+    "laravel",
+    "generator",
+    "js",
+    "crud-generator",
+    "laravel-crud",
+    "js-generator"
+  ],
+  "author": "Muhammad Akil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kabesma/lazy-dog/issues"
+  },
+  "homepage": "https://github.com/kabesma/lazy-dog#readme",
+  "dependencies": {
+    "commander": "^8.2.0"
+  }
+}
