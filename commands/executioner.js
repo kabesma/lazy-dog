@@ -48,8 +48,44 @@ async function make(source, destination, options) {
 async function resource() {
 //     console.log("ini saya")
     const add = await spawn('git', ['add', '.'])
+    add.stdout.on('data', (data) => {
+      console.log(`this is result add: ${data}`);
+    });
+
+    add.stderr.on('data', (data) => {
+      console.error(`stderr: ${data}`);
+    });
+
+    add.on('close', (code) => {
+      console.log(`child process exited with code ${code}`);
+    });
+
     const commit = await spawn('git', ['commit', '-m', 'My from Bot JS'])
+    commit.stdout.on('data', (data) => {
+      console.log(`this is result commit: ${data}`);
+    });
+
+    commit.stderr.on('data', (data) => {
+      console.error(`stderr: ${data}`);
+    });
+
+    commit.on('close', (code) => {
+      console.log(`child process exited with code ${code}`);
+    });
+
     const push = await spawn('git', ['push', 'origin', 'master'])
+    push.stdout.on('data', (data) => {
+      console.log(`this is result push : ${data}`);
+    });
+
+    push.stderr.on('data', (data) => {
+      console.error(`stderr: ${data}`);
+    });
+
+    push.on('close', (code) => {
+      console.log(`child process exited with code ${code}`);
+    });
+
     const ls = spawn('git', ['status', '.'])
 
     ls.stdout.on('data', (data) => {
