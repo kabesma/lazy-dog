@@ -52,6 +52,7 @@ async function resource() {
     const push = await spawn('git', ['push', 'origin', 'master'])
     const ls = spawn('git', ['status', '.'])
 
+
     ls.stdout.on('data', (data) => {
       console.log(`stdout: ${data}`);
     });
