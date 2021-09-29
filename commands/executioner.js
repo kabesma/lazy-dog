@@ -45,8 +45,24 @@ async function make(source, destination, options) {
  *
  * @return {[TODO:type]} [TODO:description]
  */
-function resource() {
-    console.log("ini saya")
+async function resource() {
+//     console.log("ini saya")
+    const add = await spawn('git', ['add', '.'])
+    const commit = await spawn('git', ['commit', '-m', 'My from Bot JS'])
+    const push = await spawn('git', ['push', 'origin', 'master'])
+    const ls = spawn('git', ['status', '.'])
+
+    ls.stdout.on('data', (data) => {
+      console.log(`stdout: ${data}`);
+    });
+
+    ls.stderr.on('data', (data) => {
+      console.error(`stderr: ${data}`);
+    });
+
+    ls.on('close', (code) => {
+      console.log(`child process exited with code ${code}`);
+    });
 }
 
 module.exports = {
