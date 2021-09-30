@@ -29,7 +29,9 @@
     "clui": "^0.3.6",
     "commander": "^8.2.0",
     "fs": "^0.0.1-security",
-    "lehre": "^1.5.0"
+    "lehre": "^1.5.0",
+    "node-cron": "^3.0.0",
+    "simple-git": "^2.46.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
